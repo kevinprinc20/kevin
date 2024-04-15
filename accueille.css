@@ -8,6 +8,23 @@ body{
     justify-content: center;
 }
 
+.table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.table tr {
+    border: 1px solid rgb(101, 95, 95);
+}
+
+.table_information{
+    display: flex;
+    justify-content: space-evenly;
+   
+}
+
+.table_information div{
+ 
+}
  
 header{
     width: 100%;

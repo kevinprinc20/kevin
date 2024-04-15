@@ -22,36 +22,91 @@
 
     <section class="un">
 
-        <form action="">
+        <form action="#" >
             <select name="" id="type">
                 <option value="+">+</option>
                 <option value="-">-</option>
             </select>
-
             <input type="text" id="name" class="name" placeholder="Add description">
             <input type="number" id="amount" class="number" placeholder="value">
-            <button id="btn">ok</button>
+            <button id="submit_button" type="submit">Visit Google</button>
         </form>
 
     </section>
-    <section class="deux">
-        <table>
-           
-        </table>
+    <section class="table_information">
+        <div id="income_section">
+            <h1>LEFT</h1>
+
+            <div
+                class="table-responsive"
+            >
+               
+            </div>
+            
+        </div>
+        <div  id="expense_section">
+            <h1>RIGHT</h1>
+        </div>
     </section>
   
 
     <script>
-        const type = document.getElementById('type')
-        const name = document.getElementById('name')
-        const amount = document.getElementById('amount')
-        const btn = document.getElementById('btn')
+        let database = [];
+           document.getElementById('submit_button').addEventListener('click',function(e){ 
+            e.preventDefault();
+            const type = document.getElementById('type');
+            const name = document.getElementById('name');
+            const amount = document.getElementById('amount');
+            console.log(type, name, amount);
 
-        btn.addEventListener('click' , function(e){
-            e.preventDefault()
+            const x = {
+                id : database.length +1,
+                type : type.value,
+                name : name.value,
+                amount : amount.value
+            }
+            type.value = "";
+            name.value = "";
+            amount.value = "";
+            database.push(x);
 
-            console.log(name.value )
-        })
+            const income = database.filter((x)=> x.type == "+");
+            const expenses = database.filter((x)=> x.type == "-");
+           let dessin_income =  drawTable(income);
+           let expense_income =  drawTable(expenses);
+            document.getElementById("income_section").innerHTML = dessin_income;
+            document.getElementById("expense_section").innerHTML = expense_income;
+            console.log(dessin);
+           })
+
+           const drawTable = (arr) => {
+
+            let table = ` <table
+            class="table table-primary"
+        >
+            <thead>
+                <tr>
+                    <th scope="col">Column 1</th>
+                    <th scope="col">Column 2</th>
+                    <th scope="col">Column 3</th>
+                </tr>
+            </thead>
+            <tbody>`
+        for(let i = 0; i < arr.length; i++){
+            table += ` <tr class="">
+                <td scope="row">${arr[i].type}</td>
+                <td scope="row">${arr[i].name}</td>
+                <td>${arr[i].amount}</td>
+              
+            </tr>`
+        }
+        table+= `    
+            </tbody>
+        </table>`
+
+        return table;
+           }
+       
     </script>
 </body>
 </html>
