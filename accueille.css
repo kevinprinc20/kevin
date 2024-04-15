@@ -1,0 +1,71 @@
+body{
+    height: 65vh;
+    margin: 0;
+    padding: 0;
+    background-image: url('img/IMG-20240412-WA0035.jpg');
+    background-size: 100% 75%;
+    background-repeat: no-repeat;
+    justify-content: center;
+}
+
+ 
+header{
+    width: 100%;
+    height: 45vh;
+    
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: relative;
+}
+.etoile{
+    
+    margin-bottom: 0px;
+    position: absolute;
+}
+.zero{
+    width: 50vh;
+    padding: 14px;
+    background-color: rgb(39, 142, 106);
+    display: flex;
+
+}
+
+
+.zero-un{
+    width: 50vh;
+    padding: 14px;
+    margin-top: 16px;
+    background-color: rgb(203, 67, 67);
+    display: flex;
+
+}
+select {
+    margin: 0 auto;
+    height: 5vh;
+    width: 43px;
+    border-radius: 5px;
+    justify-content: center;
+    justify-self: center;
+}
+.un{
+    background-color: #f1eeea;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.name{
+    height: 5vh;
+    width: 52vh;
+    border-radius: 5px;
+    border: 11PX;
+    background-color: whitesmoke;
+    justify-self: center;
+}
+.number{
+    height: 5vh;
+    width: 11vh;
+    border-radius: 5px;
+    border: 11PX;
+    background-color: whitesmoke;
+}

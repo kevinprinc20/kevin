@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="accueille.css">
+    <script src="accueille.js"></script>
+
+    <style>
+    
+    </style>
+</head>
+<body>
+    <header>
+        <div class="etoile">
+            <div class="zero">INCOME</div>
+            <div class="zero-un">EXPENSES</div>
+        </div>
+        
+    </header>
+
+    <section class="un">
+
+        <form action="">
+            <select name="" id="type">
+                <option value="+">+</option>
+                <option value="-">-</option>
+            </select>
+
+            <input type="text" id="name" class="name" placeholder="Add description">
+            <input type="number" id="amount" class="number" placeholder="value">
+            <button id="btn">ok</button>
+        </form>
+
+    </section>
+    <section class="deux">
+        <table>
+           
+        </table>
+    </section>
+  
+
+    <script>
+        const type = document.getElementById('type')
+        const name = document.getElementById('name')
+        const amount = document.getElementById('amount')
+        const btn = document.getElementById('btn')
+
+        btn.addEventListener('click' , function(e){
+            e.preventDefault()
+
+            console.log(name.value )
+        })
+    </script>
+</body>
+</html>
